@@ -1,0 +1,16 @@
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: #1ac95d;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: 5px;
+    height: 15px !important;
+     width: 100%;   
+} 
+mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
