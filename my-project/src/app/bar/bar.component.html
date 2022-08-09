@@ -1,32 +1,35 @@
 <div><mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar><br/>
     
 </div>
+
 <!-- Form starts -->
 <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate method="post">
     <!-- Gender -->
-    
-    <div  *ngFor="let ans of answer">
+     <div> 
+        
+        <p>{{answer.question}}</p>
+                 
        <input id="first" type="radio" class="custom-control-input" value="first" name="radio" ngModel required>
-       <label class="custom-control-label" for="first">{{ans.ans1}}</label>
+       <label class="custom-control-label" for="first">{{answer.ans1}}</label><br/>
     
 
        <input id="second" type="radio" class="custom-control-input" value="second" name="radio" ngModel required>
-       <label class="custom-control-label" for="second">{{ans.ans2}}</label>
+       <label class="custom-control-label" for="second">{{answer.ans2}}</label><br/>
     
     
         <input id="third" type="radio" class="custom-control-input" value="third" name="radio" ngModel required>
-        <label class="custom-control-label" for="third">{{ans.ans3}}</label>
+        <label class="custom-control-label" for="third">{{answer.ans3}}</label><br/>
    
     
         <input id="forth" type="radio" class="custom-control-input" value="forth" name="radio" ngModel required>
-        <label class="custom-control-label" for="forth">{{ans.ans4}}</label>
-     </div>
+        <label class="custom-control-label" for="forth">{{answer.ans4}}</label><br/>
+      </div> 
     <div *ngIf="isSubmitted && myForm.invalid">
       
     </div>
     <!-- Submit Button -->
-    <button type="submit" [disabled]="myForm.form.invalid">NEXT</button>
-    <button type="reset" (click)="progressbarBackword()">back</button>
+    <button type="submit" id ="button" [disabled]="!myForm.form.valid ">NEXT</button>
+    <button type="reset" id ="button1" (click)="progressbarBackword()">back</button>
     
  </form><!-- Form ends -->
 <div>

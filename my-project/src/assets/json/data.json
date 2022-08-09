@@ -1,25 +1,84 @@
 [{
-    "ans1" : "answer!!!",
-    "ans2" : "answer!!!",
-    "ans3" : "answer!!!",
-    "ans4" : "answer!!!"
+    "questionIndex" : "0",
+    "question" : "How are teams organized and resourced?",
+
+    "ans1" : "All IT assets are funded annually by projects and ‘run’ budgets",
+    "ans2" : "Internal platforms and shared services are operationally funded; external-facing products are delivered by cross-functional teams",
+    "ans3" : "Most of our portfolio, including some internal platforms, is delivered by cross-functional build-and-run teams; funding is annual or semi-annual",
+    "ans4" : "The entire portfolio is organized in continuously funded cross-functional build-and-run teams"
+},
+
+{   "questionIndex" : "1",
+    "question" : "How strong is customer centricity?",
+  
+    
+    "ans1" : "Most individuals would find it difficult to identify their customers",
+    "ans2" : "Our external-facing applications can clearly identify their customers but we have no programmatic feedback mechanisms in place",
+    "ans3" : "Most of our portfolio can clearly identify their customers; some mechanisms for customer feedback are in place but they are not universal",
+    "ans4" : "Product managers have regular meetings with internal customers and programmatic mechanisms to gather and respond to feedback"
+},
+{    "questionIndex" : "2",
+    "question" : "How are backlogs managed and prioritized?",
+   
+   
+    "ans1" : "Programs, projects and Gantt charts drive the backlog",
+    "ans2" : "A primary business stakeholder dictates desired features, and portfolio managers commit teams to the work",
+    "ans3" : "Product managers create execution plans to deliver desired capabilities on an annual planning cycle",
+    "ans4" : "Product managers are the long-term custodians of product vision, roadmap and viability"
+},
+{  "questionIndex" : "3",
+    "question" : "How clear is the definition of value??",
+    
+   
+    "ans1" : "Most individuals would be hard-pressed to explain how they contribute to tangible business outcomes",
+    "ans2" : "A few leaders can articulate the business drivers",
+    "ans3" : "Most product managers can articulate the value they provide to their customers and the business",
+    "ans4" : "Value is well-defined and serves as a focal point for every single team member"
 },
 {
-    "ans1" : "answer1",
-    "ans2" : "answer1",
-    "ans3" : "answer1",
-    "ans4" : "answer1"
+   
+    "questionIndex" : "4",
+    "question" : "How are dependencies managed?",
+    "ans1" : "The execution path involves SLAs with functional areas",
+    "ans2" : "Technical, process and skill dependencies slow down most deliveries",
+    "ans3" : "Some internally consumed capabilities are self-service but others still require handoffs and coordination",
+    "ans4" : "All internally consumed capabilities are available as self-service"
 },
 {
-    "ans1" : "answer2",
-    "ans2" : "answer2",
-    "ans3" : "answer2",
-    "ans4" : "answer2"
+    "questionIndex" : "5",
+    "question" : "How rapidly can customer feedback revise planning?",
+   
+   
+    "ans1" : "An enterprise schedule provides highly governed release windows a few times a year",
+    "ans2" : "In case of emergency, applications can release independently to production",
+    "ans3" : "Some applications have an independent path to production and are able to incorporate customer feedback within a quarter",
+    "ans4" : "All products have an automated, an independent path to production and are able to incorporate customer feedback within weeks"
+},
+{   "questionIndex" : "6",
+    "question" : "How are delivery teams measured?",
+    "ans1" : "Primarily with quality and cost metrics",
+    "ans2" : "Agile, DORA and Engineering metrics",
+    "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
+    "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
 },
 {
-    "ans1" : "answer3",
-    "ans2" : "answer3",
-    "ans3" : "answer3",
-    "ans4" : "answer3"
-}
+    "questionIndex" : "7",
+    "question" : "How are delivery check",
+    
+   
+    "ans1" : "Primarily with quality and cost metrics",
+    "ans2" : "Agile, DORA and Engineering metrics",
+    "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
+    "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
+},
+{
+    
+        "questionIndex" : "8",
+        "question" : "How are delivery check",
+        "ans1" : "Primarily with quality and cost metrics",
+        "ans2" : "Agile, DORA and Engineering metrics",
+        "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
+        "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
+    }
+
 ]
