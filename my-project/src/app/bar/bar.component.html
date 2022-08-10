@@ -2,9 +2,9 @@
     
 </div>
 
-<!-- Form starts -->
+
 <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate method="post">
-    <!-- Gender -->
+
      <div> 
         
         <p>{{answer.question}}</p>
@@ -27,12 +27,8 @@
     <div *ngIf="isSubmitted && myForm.invalid">
       
     </div>
-    <!-- Submit Button -->
-    <button type="submit" id ="button" [disabled]="!myForm.form.valid ">NEXT</button>
-    <button type="reset" id ="button1" (click)="progressbarBackword()">back</button>
-    
- </form><!-- Form ends -->
-<div>
-    <!--<button (click)="progressbarForword()">next</button>-->
-    
-</div>
+    <div>
+     <button  mat-raised-button color="primary" type="reset" id ="button1" (click)="progressbarBackword()">BACK</button>
+    <button mat-raised-button color="primary" type="submit" id ="button" [disabled]="!myForm.form.valid ">NEXT</button>
+  </div>
+  </form>

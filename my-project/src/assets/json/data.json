@@ -60,25 +60,6 @@
     "ans2" : "Agile, DORA and Engineering metrics",
     "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
     "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
-},
-{
-    "questionIndex" : "7",
-    "question" : "How are delivery check",
-    
-   
-    "ans1" : "Primarily with quality and cost metrics",
-    "ans2" : "Agile, DORA and Engineering metrics",
-    "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
-    "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
-},
-{
-    
-        "questionIndex" : "8",
-        "question" : "How are delivery check",
-        "ans1" : "Primarily with quality and cost metrics",
-        "ans2" : "Agile, DORA and Engineering metrics",
-        "ans3" : "Flow metrics are measured in addition to Agile, DORA and Engineering metrics",
-        "ans4" : "Flow metrics and business outcomes are incorporated in operational reviews at all levels"
-    }
+}
 
 ]

@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, } from "@angular/core";
-import { FormsModule,ReactiveFormsModule, } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule} from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
+import {MatButtonModule} from '@angular/material/button';
 
 import { BarComponent } from './bar/bar.component';
 import{MatProgressBarModule} from '@angular/material/progress-bar'
@@ -13,7 +14,7 @@ import { MatRadioModule} from '@angular/material/radio'
 @NgModule({
     declarations: [AppComponent, BarComponent, ],
     imports: [BrowserModule, FormsModule, MatProgressBarModule, BrowserAnimationsModule,
-         ReactiveFormsModule, MatRadioModule],
+         ReactiveFormsModule, MatRadioModule, MatButtonModule ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA,],
     bootstrap: [AppComponent],
 })

@@ -11,6 +11,7 @@ interface questionAns {
   ans3: String,  
   ans4: String,
 } 
+
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
@@ -19,9 +20,11 @@ interface questionAns {
 export class BarComponent implements OnInit {
 progress:any=0;
 totalindex=0;
+checkprogressBar=0;
 answer: questionAns = data[0];  
 allQuestions: questionAns[] = data;
 progressBarIncrement: number = 0;
+indexQuestion=0;
 constructor() { }
 ngOnInit(): void {
     // console.log(this.answer)
@@ -39,38 +42,46 @@ ngOnInit(): void {
       } 
        else {
               this.progressBarIncrement=100/this.totalindex+2;
-               const indexQuestion =  Number(this.answer.questionIndex)
-               this.answer = data[indexQuestion+1]
+              this.indexQuestion =  Number(this.answer.questionIndex)
+               this.answer = data[this.indexQuestion+1]
               // if(indexQuestion==this.allQuestions.length-1){
               //     var element = <HTMLInputElement> document.getElementById("button");
               //     element.disabled=true;
               // }
              
         }
-        const indexQuestion =  Number(this.answer.questionIndex)
-  
-        if(indexQuestion==this.allQuestions.length-1){
-          var element = <HTMLInputElement> document.getElementById("button");
-          element.disabled=true;
+        //const indexQuestion =  Number(this.answer.questionIndex)
+        var element = <HTMLInputElement> document.getElementById("button");
+        if(this.indexQuestion==this.allQuestions.length-1){
           
+          element.disabled=true;
+         }else{
+          element.disabled=false;
+         }
          
-      }
      return this.progress=this.progress+this.progressBarIncrement
-     
+    
     }
    
     progressbarBackword(){
-     
-        if(this.progress==0){
-        this.progress=this.progress+0
-      
-   
-    }
-     else { 
-      
+      this.indexQuestion =  Number(this.answer.questionIndex)
+      this.answer = data[this.indexQuestion-1]
       this.progress=this.progress-this.progressBarIncrement
+    //     if(this.progress==0){
+    //     this.progress=this.progress+0
+    //  }
+    //  else { 
       
+      
+      
+    //  }
+     var element = <HTMLInputElement> document.getElementById("button");
+     if(this.indexQuestion==this.allQuestions.length){
+      element.disabled=true;
+     }else{
+      element.disabled=false;
      }
+     //this.answer = data[this.indexQuestion-1]
   }
 }
   
