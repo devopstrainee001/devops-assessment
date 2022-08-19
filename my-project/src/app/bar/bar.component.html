@@ -1,34 +1,34 @@
 <div><mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar><br/>
-    
+
 </div>
 
 
 <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate method="post">
 
-     <div> 
-        
+     <div>
+
         <p>{{answer.question}}</p>
-                 
+
        <input id="first" type="radio" class="custom-control-input" value="first" name="radio" ngModel required>
        <label class="custom-control-label" for="first">{{answer.ans1}}</label><br/>
-    
+
 
        <input id="second" type="radio" class="custom-control-input" value="second" name="radio" ngModel required>
        <label class="custom-control-label" for="second">{{answer.ans2}}</label><br/>
-    
-    
+
+
         <input id="third" type="radio" class="custom-control-input" value="third" name="radio" ngModel required>
         <label class="custom-control-label" for="third">{{answer.ans3}}</label><br/>
-   
-    
+
+
         <input id="forth" type="radio" class="custom-control-input" value="forth" name="radio" ngModel required>
         <label class="custom-control-label" for="forth">{{answer.ans4}}</label><br/>
-      </div> 
+      </div>
     <div *ngIf="isSubmitted && myForm.invalid">
-      
+
     </div>
     <div>
-     <button  mat-raised-button color="primary" type="reset" id ="button1" (click)="progressbarBackword()">BACK</button>
-    <button mat-raised-button color="primary" type="submit" id ="button" [disabled]="!myForm.form.valid ">NEXT</button>
+     <button  mat-raised-button color="primary" type="reset" id ="back" [hidden]= "backHidden" (click)="progressbarBackword()">BACK</button>
+    <button mat-raised-button color="primary" type="submit" id ="next" >NEXT</button>
   </div>
   </form>
