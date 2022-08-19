@@ -1,34 +1,48 @@
-<div><mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar><br/>
 
+<div class="format-gird">
+  <h1>DevOps Assessment ProgressBar POC</h1>
+  <div class="ans-hint"><p>Progress: {{indexQuestion}}/{{totalindex}}</p></div>
+<div class="progress-bar">
+  <mat-progress-bar mode="determinate" [value]=progress></mat-progress-bar><br/>
 </div>
-
+<div class="ans-hint"><p>Choose the answer that best describes the prevailing current state for the majority of cases.</p></div>
 
 <form #myForm="ngForm" (submit)="submitForm(myForm)" novalidate method="post">
 
-     <div>
+     <div class="section-format">
 
         <p>{{answer.question}}</p>
+      <div class="radio-block-setting"> 
+      <div class="radio-rect-format"> 
+        <div  class="answer"><label class="custom-control-label" for="first">{{answer.ans1}}</label></div>
+        <div class="radio-button"><input id="first" type="radio" class="custom-control-input" value="first" name="radio" ngModel required></div>
+       </div>
 
-       <input id="first" type="radio" class="custom-control-input" value="first" name="radio" ngModel required>
-       <label class="custom-control-label" for="first">{{answer.ans1}}</label><br/>
+       <div class="radio-rect-format"> 
+        <div  class="answer"><label class="custom-control-label" for="second">{{answer.ans2}}</label></div>
+       <div class="radio-button"><input id="second" type="radio" class="custom-control-input" value="second" name="radio" ngModel required></div>
+       </div>
 
 
-       <input id="second" type="radio" class="custom-control-input" value="second" name="radio" ngModel required>
-       <label class="custom-control-label" for="second">{{answer.ans2}}</label><br/>
+        <div class="radio-rect-format">
+        <div  class="answer"><label class="custom-control-label" for="third">{{answer.ans3}}</label></div>
+        <div class="radio-button"><input id="third" type="radio" class="custom-control-input" value="third" name="radio" ngModel required></div>
+        </div>
 
-
-        <input id="third" type="radio" class="custom-control-input" value="third" name="radio" ngModel required>
-        <label class="custom-control-label" for="third">{{answer.ans3}}</label><br/>
-
-
-        <input id="forth" type="radio" class="custom-control-input" value="forth" name="radio" ngModel required>
-        <label class="custom-control-label" for="forth">{{answer.ans4}}</label><br/>
+        <div class="radio-rect-format">
+          <div class="answer"><label class="custom-control-label" for="forth">{{answer.ans4}}</label></div>
+          <div class="radio-button"><input id="forth" type="radio" class="custom-control-input" value="forth" name="radio" ngModel required></div>
+        </div>
       </div>
+     </div>
     <div *ngIf="isSubmitted && myForm.invalid">
 
     </div>
-    <div>
-     <button  mat-raised-button color="primary" type="reset" id ="back" [hidden]= "backHidden" (click)="progressbarBackword()">BACK</button>
-    <button mat-raised-button color="primary" type="submit" id ="next" >NEXT</button>
+    <div class="button-format">
+     <button  mat-raised-button  type="reset" id ="back" [hidden]= "backHidden" (click)="progressbarBackword()">BACK</button>
+    <button mat-raised-button  type="submit" id ="next" >NEXT</button>
   </div>
   </form>
+</div>
+
+

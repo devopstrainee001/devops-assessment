@@ -1,5 +1,5 @@
 ::ng-deep .mat-progress-bar-fill::after {
-    background-color: #1ac95d;
+    background-color:rgb(128, 188, 0);
 }
 
 ::ng-deep .mat-progress-bar-buffer {
@@ -7,14 +7,27 @@
 }
 
 ::ng-deep .mat-progress-bar {
-    border-radius: 5px;
+    border-radius: 10px;
     height: 15px !important;
-     width: 100%;   
+     width: 90%;   
 } 
+
+div.progress-bar{
+  width: 95%;
+  padding-left:25px;
+  padding-right: 40px;
+}
+
 mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
   }
+  
+  .ans-hint{
+    margin-left:30px;
+    color:darkgrey;
+  }
   button {
+    
     padding: 0 6px 0 6px;
     margin: 6px 8px 6px 8px;
     min-width: 88px;
@@ -25,6 +38,9 @@ mat-radio-button ~ .mat-radio-button {
     text-decoration:none;
     border: none;
     outline: none;
+    background-color: rgb(128, 188, 0);
+    color:white;
+    
   }
   .center {
     margin: 0;
@@ -34,4 +50,57 @@ mat-radio-button ~ .mat-radio-button {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  div.format-gird{
+    background-color: rgb(247, 244, 244);
+    height: 400px;
+    width: 1000px;
+    margin: 50px;
+  }
+  h1{
+    color: rgb(163 15 15);
+    margin:20px;
+    margin-top:10px;
+}
+div.button-format{
+  text-align: center;
+
+}
+div.section-format{
+  margin-left: 30px;
+}
+div.radio-block-setting{
+display: inline-flex;
+}
+div.radio-rect-format{
+  border:1px solid black;
+  width:200px;
+  text-align: left;
+  text-transform: none;
+  font-size: 12px;
+ 
+  background-color:white;
+  margin:20px;
+}
+div.radio-button{
+ text-align: center;
+ height: 25%;
+}
+
+div.answer{
+  text-align: center;
+  height: 75%;
+ }
   
+ input[type='radio']:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: rgb(128, 188, 0);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(134, 133, 133);
+}

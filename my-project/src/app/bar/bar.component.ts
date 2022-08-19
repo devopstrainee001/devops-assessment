@@ -24,6 +24,7 @@ export class BarComponent implements OnInit {
     answer: questionAns = data[0];
     allQuestions: questionAns[] = data;
     progressBarIncrement: number = 0;
+    questionIndex=0;
     indexQuestion=0;
     backHidden=true;
     isSubmitted = false;
