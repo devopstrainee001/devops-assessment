@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
-import { mixinDisabled } from '@angular/material/core';
-import { MatProgressBar } from '@angular/material/progress-bar';
+import { NgForm } from '@angular/forms';
 import data from '../../assets/json/data.json'
 interface questionAns {
   questionIndex: String,
@@ -26,6 +24,7 @@ export class BarComponent implements OnInit {
     progressBarIncrement: number = 0;
     questionIndex=0;
     indexQuestion=0;
+    progressBarReading=0;
     backHidden=true;
     isSubmitted = false;
     constructor() { }
@@ -60,6 +59,7 @@ export class BarComponent implements OnInit {
           element.style.display = "";
           element1.style.display = "";
         }
+        this.progressBarReading++ ;
         return this.progress = this.progress + this.progressBarIncrement
 
     }
@@ -68,13 +68,14 @@ export class BarComponent implements OnInit {
       this.indexQuestion = Number(this.answer.questionIndex)
       this.answer = data[this.indexQuestion - 2]
       if (this.indexQuestion == this.totalindex) {
-        this.progress = this.progress - (this.progressBarIncrement * 2)
+        this.progress = this.progress - (this.progressBarIncrement * 2);
+        this.progressBarReading-- ;
       } else {
         this.progress = this.progress - this.progressBarIncrement;
       }
-
+      this.progressBarReading-- ;
       var element = <HTMLInputElement>document.getElementById("next");
-      if (Number(this.answer.questionIndex) == 1) {
+      if (this.progressBarReading==0) {
         var element1 = <HTMLInputElement>document.getElementById("back");
         element1.style.display = "none";
         //element.disabled = true;
